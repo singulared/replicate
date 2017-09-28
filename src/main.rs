@@ -20,16 +20,14 @@ impl Service for StatusService {
     type Future = future::Ok<Response, io::Error>;
 
     fn call(&self, _request: Request) -> Self::Future {
-        let (code, message) = match _request.path() {
-            "/200" => (200, "OK"),
-            "/400" => (400, "Bad Request"),
-            "/500" => (500, "Internal Server Error"),
-            _ => (404, "Not Found")
-        };
-
+        println!("Request debug: {:?}", _request);
+        let method = _request.method();
+        // let path = _request.path();
         let mut resp = Response::new();
-        resp.status_code(code, message);
-        resp.body(message);
+        // let mut body = format!("{}{}", method, path);
+        resp.status_code(200, "OK");
+        resp.body(method);
+        println!("+ debug: {:?}", _request);
         future::ok(resp)
     }
 }
