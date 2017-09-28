@@ -1,0 +1,6 @@
+[package]
+name = "replicate"
+version = "0.1.0"
+authors = ["Belousow Makc <lib.bmw@gmail.com>"]
+
+[dependencies]
