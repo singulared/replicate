@@ -8,7 +8,6 @@ use hyper::server::{Http, Request, Response, Service};
 
 struct ReplicateService;
 
-// const PHRASE: &'static str = "Hello, World!";
 
 impl Service for ReplicateService {
     // boilerplate hooking up hyper's server types
