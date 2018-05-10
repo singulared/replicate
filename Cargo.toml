@@ -4,8 +4,9 @@ version = "0.1.0"
 authors = ["Belousow Makc <lib.bmw@gmail.com>"]
 
 [dependencies]
-hyper = "0.11.2"
-futures = "0.1.16"
+futures = "0.2"
+pcap = "0.7"
+tokio-core = "0.1"
 # tokio-proto = "0.1.1"
 # tokio-service = "0.1.0"
 # log = "0.3.8"
